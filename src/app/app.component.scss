@@ -1,4 +1,9 @@
 .container {
     width: 1000px;
     margin: 0 auto;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
 }

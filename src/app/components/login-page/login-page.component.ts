@@ -12,15 +12,17 @@ export class LoginPageComponent implements OnInit {
   constructor(private fb: FormBuilder,) { }
 
   ngOnInit(): void {
+    console.log('login');
+
     this.loginForm = this.fb.group({
-      email: ['jjjj'],
+      email: [''],
       password: ['']
     })
 
   }
   logIn() {
     console.log('kkkk');
-    this.loginForm.reset()
+    // this.loginForm.reset()
 
   }
 }
