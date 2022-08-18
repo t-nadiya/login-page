@@ -26,7 +26,12 @@ export class LoginPageComponent implements OnInit {
   logIn(data: any) {
     // console.log(this.loginForm.get('email')?.value);
 
-    this.loginService.logIn(data);
+    this.loginService.logIn(data)
+    // .subscribe(result => {
+    //   console.warn(result);
+    // })
+    console.log(data);
+
 
     this.loginForm.reset()
   }
