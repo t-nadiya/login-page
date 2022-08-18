@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthMainGuard } from 'src/app/auth/auth-main.guard';
+import { MainAuthGuard } from '../../auth/main-auth.guard';
 import { MainPageComponent } from './main-page.component';
 
-const routes: Routes = [{ path: '', component: MainPageComponent, canActivate: [AuthMainGuard] }];
+const routes: Routes = [{ path: '', canActivate: [MainAuthGuard], component: MainPageComponent, }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

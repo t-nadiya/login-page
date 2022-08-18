@@ -1,8 +1,7 @@
 <div class="wrapper">
     <div class="card">
         <h4>Enter email and password</h4>
-        <!-- <form [formGroup]="form" (ngSubmit)="onSubmit()" #productForm="ngForm"></form> -->
-        <form formGroup="loginForm" (ngSubmit)="logIn()">
+        <form [formGroup]="loginForm" (ngSubmit)="logIn(loginForm.value)">
             <div class="field">
                 <label for="email">Email</label>
                 <input type="text" id="email" formControlName="email" required />
@@ -11,8 +10,7 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" formControlName="password" required />
             </div>
-            <!-- <button type="submit" [disabled]="!form.valid">Submit</button> -->
-            <button type="submit">Log in</button>
+            <button type="submit" [disabled]="!loginForm.valid">Log in</button>
         </form>
     </div>
 </div>

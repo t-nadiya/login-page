@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { delay, of } from 'rxjs';
+// import { delay, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthMainService {
+export class AuthenticationService {
 
   constructor() { }
 
-  isLogged() {
+  isLoggedIn() {
     return false;
 
     // urlTree
