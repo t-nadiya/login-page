@@ -2,6 +2,8 @@ import { LoginService } from './../../services/login.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validator, Validators } from '@angular/forms'
 import { LoginDetails } from '../../models/login-details';
+import { Router } from '@angular/router';
+import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-login-page',
@@ -10,12 +12,11 @@ import { LoginDetails } from '../../models/login-details';
 })
 export class LoginPageComponent implements OnInit {
 
+
   public loginForm!: FormGroup
-  constructor(private fb: FormBuilder, private loginService: LoginService) { }
+  constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router) { }
 
   ngOnInit(): void {
-    console.log('login');
-
     this.loginForm = this.fb.group({
       email: [''],
       password: ['']
@@ -25,15 +26,20 @@ export class LoginPageComponent implements OnInit {
 
   }
   logIn(details: LoginDetails) {
-    // console.log(this.loginForm.get('email')?.value);
 
     this.loginService.logIn(details)
-    // .subscribe(result => {
-    //   console.warn(result);
-    // })
-    console.log(details);
+      .subscribe({
+        next: result => {
 
+          // if (result.email === 'nadiia.tytarenko@neobank.one' && result.password === '12345')
+
+        },
+        error: error => {
+
+        }
+      })
 
     this.loginForm.reset()
   }
 }
+

@@ -6,11 +6,14 @@ import { LoginDetails } from '../models/login-details';
   providedIn: 'root'
 })
 export class LoginService {
-  url!: string;
+
+  isLogged: boolean = false;
 
   constructor(private http: HttpClient) { }
   logIn(details: LoginDetails) {
-    return this.http.post<LoginDetails>(this.url, details)
+    return this.http.post<LoginDetails>('http://localhost:3000/login', details)
   }
-
+  isLoggedIn() {
+    return this.isLogged;
+  }
 }
