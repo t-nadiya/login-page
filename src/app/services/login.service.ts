@@ -16,4 +16,7 @@ export class LoginService {
   isLoggedIn() {
     return this.isLogged;
   }
+  setLoggedIn() {
+    this.isLogged = true;
+  }
 }

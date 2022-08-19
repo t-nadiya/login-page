@@ -31,7 +31,10 @@ export class LoginPageComponent implements OnInit {
       .subscribe({
         next: result => {
 
-          // if (result.email === 'nadiia.tytarenko@neobank.one' && result.password === '12345')
+          if (result.email === 'nadiia.tytarenko@neobank.one' && result.password === '12345') {
+            this.loginService.setLoggedIn();
+            this.router.navigate(['main-page'])
+          }
 
         },
         error: error => {
