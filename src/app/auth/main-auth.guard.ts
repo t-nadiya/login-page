@@ -11,6 +11,9 @@ export class MainAuthGuard implements CanActivate {
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return this.auth.isLoggedIn() ? true : this.router.navigate(['login-page'])
 
+    // urlTree
+    // return this.auth.isLogged().pipe(map(isLogged => isLogged || this.router.createUrlTree(['login-page'])))
+
   }
 
 }

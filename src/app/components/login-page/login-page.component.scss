@@ -27,6 +27,19 @@
                 border: none;
                 border-radius: 0.2rem;
             }
+            input.ng-touched.ng-invalid {
+                border: 0.1rem solid red;
+            }
+        }
+        .agree {
+            margin-bottom: 1rem;
+            label {
+                font-size: 0.8rem;
+            }
+            // input.ng-invalid {
+            //     border: 0.1rem solid red;
+            //     color: red;
+            // }
         }
         button {
             background-color: #576f72;

@@ -24,6 +24,28 @@
       "email": "nadiia.tytarenko@neobank.one",
       "password": "12345",
       "id": "NzyB-fy"
+    },
+    {
+      "id": "dWCs5FZ"
+    },
+    {
+      "id": "lwymH8t"
+    },
+    {
+      "email": "nadezhda.ti@ukr.net",
+      "password": "qwww",
+      "id": "IQLXmbK"
+    },
+    {
+      "email": "nadiia.tytarenko@neobank.one",
+      "password": "12345",
+      "id": "zvjGUf0"
+    },
+    {
+      "email": "nadiia.tytarenko@neobank.one",
+      "password": "12345",
+      "agree": true,
+      "id": "mdqw3JH"
     }
   ]
 }
