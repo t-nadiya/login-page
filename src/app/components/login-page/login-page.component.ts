@@ -1,6 +1,7 @@
 import { LoginService } from './../../services/login.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validator, Validators } from '@angular/forms'
+import { LoginDetails } from '../../models/login-details';
 
 @Component({
   selector: 'app-login-page',
@@ -23,14 +24,14 @@ export class LoginPageComponent implements OnInit {
     })
 
   }
-  logIn(data: any) {
+  logIn(details: LoginDetails) {
     // console.log(this.loginForm.get('email')?.value);
 
-    this.loginService.logIn(data)
+    this.loginService.logIn(details)
     // .subscribe(result => {
     //   console.warn(result);
     // })
-    console.log(data);
+    console.log(details);
 
 
     this.loginForm.reset()

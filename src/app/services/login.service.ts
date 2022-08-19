@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { LoginDetails } from '../models/login-details';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,8 @@ export class LoginService {
   url!: string;
 
   constructor(private http: HttpClient) { }
-  logIn(data: any) {
-    return this.http.post<any>(this.url, data)
+  logIn(details: LoginDetails) {
+    return this.http.post<LoginDetails>(this.url, details)
   }
 
 }
