@@ -1,0 +1,15 @@
+{
+  "login": [
+    {
+      "id": "",
+      "email": "nadiia.tytarenko@neobank.one",
+      "password": "12345"
+    },
+    {
+      "email": "nadiia.tytarenko@neobank.one",
+      "password": "12345",
+      "agree": true,
+      "id": "g4vTSap"
+    }
+  ]
+}

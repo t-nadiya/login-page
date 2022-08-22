@@ -12,6 +12,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
   logIn(details: LoginDetails) {
     return this.http.post<LoginDetails>('http://localhost:3000/login', details)
+    // return this.http.post<LoginDetails>('../fake-backend/db.json', details)
   }
   isLoggedIn() {
     return this.isLogged;
